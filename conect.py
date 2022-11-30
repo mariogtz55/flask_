@@ -1,10 +1,10 @@
 import psycopg2
 
 def conection():
-    host = "postgresciberfisico.postgres.database.azure.com"
+    host = "cncciber.postgres.database.azure.com"
     dbname = "postgres"
-    user = "mariogtz5@postgresciberfisico"
-    password = "Ciberfisicos2022"
+    user = "AlejandroDuran@cncciber"
+    password = "Noviembre2022@"
     sslmode = "require"
     
     conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
