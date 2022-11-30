@@ -15,6 +15,7 @@ def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 @app.route('/getValues')
+@cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def values():
     last=conection()
     res = {tags[i]: last[i] for i in range(len(tags))}
