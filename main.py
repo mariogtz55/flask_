@@ -2,7 +2,6 @@ from flask import Flask, jsonify
 import os
 from conect import conection
 import time as time
-from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 
