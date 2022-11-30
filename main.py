@@ -17,7 +17,7 @@ def values():
     res = {tags[i]: last[i] for i in range(len(tags))}
     jsonString = jsonify(res)
     response=jsonString.headers.add('Access-Control-Allow-Origin', '*')
-    return response
+    return jsonString
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
