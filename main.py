@@ -2,8 +2,10 @@ from flask import Flask, jsonify
 import os
 from conect import conection
 import time as time
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 tags=["id","timestamp", "vibracion"]
 
@@ -16,7 +18,6 @@ def values():
     last=conection()
     res = {tags[i]: last[i] for i in range(len(tags))}
     response = jsonify(res)
-    response=response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 if __name__ == '__main__':
