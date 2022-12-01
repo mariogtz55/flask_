@@ -19,4 +19,4 @@ def conection():
     cursor.close()
     conn.close()
     print('ready')
-    return rows[1]
+    return rows[-1]
